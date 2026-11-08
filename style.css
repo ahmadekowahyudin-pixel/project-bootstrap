@@ -1,0 +1,67 @@
+.garis {
+  border: 1px solid black;
+}
+
+.bg-banner {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(gambar/Blue\ Simple\ Blocks\ Landing\ Page\ Wireframe\ Website\ UI\ Prototype.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.rata-text {
+  text-align: justify;
+}
+
+nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #ffffff;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+/* Membuat elemen garis bawah */
+nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #b6895b;
+  transition: width 0.3s ease;
+}
+
+/* Hover dan warna menu aktif */
+nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover,
+nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link.active {
+  color: #b6895b;
+  transform: translateX(-3px);
+  text-shadow: 0 4px 8px rgba(182, 137, 91, 0.4);
+}
+
+/* Memunculkan garis bawah  */
+nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover::after,
+nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link.active::after {
+  width: 100%;
+}
+.pembatas-section {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #b6895b, transparent);
+  margin: 0;
+  opacity: 0.8;
+}
+/* Efek Hover Bayangan Putih Tanpa !important */
+.card.hover-white-shadow {
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card.hover-white-shadow:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transform: translateY(-5px);
+}
